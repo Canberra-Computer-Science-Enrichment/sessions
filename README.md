@@ -2,12 +2,12 @@
 
 ## Term 2 2020
 
-- 15 May - Paul
-- 22 May - Josh
-- 29 May - 
-- 05 June - Chenni
+- 15 May - Ralph - Magma
+- 22 May - Josh - [Unix system and security basics](unix_basics/README.md)
+- 29 May - Paul - embedded systems
+- 05 June - Chenni - password cracking
 - 12 June - 
-- 19 June - Ben
+- 19 June - Ben - computer music
 
 
 ## Previous Terms
