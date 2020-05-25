@@ -2,11 +2,11 @@
 
 ## Term 2 2020
 
-- 15 May - Ralph - Magma
+- 15 May - Ralph - used the [online calculator](http://magma.maths.usyd.edu.au/calc/) to give a tutorial of Magma
 - 22 May - Josh - [Unix system and security basics](unix_basics/README.md)
 - 29 May - Paul - embedded systems
 - 05 June - Chenni - password cracking
-- 12 June - 
+- 12 June - Artem - computer network attacks
 - 19 June - Ben - computer music
 
 
@@ -20,3 +20,4 @@
 - 13 March - Kelly - CAT problems from the [AIC Seniors 2013](resources/AIC_2013_Senior.pdf) sheet  Q6,Q7
 - 20 March - no session
 - 27 March - Josh - [floating-point representations and errors](https://github.com/milthorpe/numerics/)
+- 3 April - Josh - [computer modeling of epidemics](https://github.com/milthorpe/sir)
