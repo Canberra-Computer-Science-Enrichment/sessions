@@ -17,6 +17,8 @@ MacOS and Linux operating systems have SSH clients built in, so you don't need t
 
 For Windows, [PuTTY](https://www.putty.org/) is a fully-featured open-source SSH client. You can also [install the Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) which provides a complete installation of Ubuntu Linux inside your Windows system; WSL also comes with an installation of the OpenSSH client.
 
+You can install [Google's Secure Shell App plugin for the Chrome browser](https://chrome.google.com/webstore/detail/secure-shell-app/pnhechapfaindjhompbnflcldabbghjo?hl=en) to run a SSH client inside Chrome.
+
 **Think About It** Should you install one of the software packages above? How can you decide whether to trust software you find on the Internet?
 
 ### Logging in using SSH
