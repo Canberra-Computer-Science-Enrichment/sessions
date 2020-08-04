@@ -18,7 +18,7 @@
 - 22 May - Josh - [Unix system and security basics](unix_basics/README.md)
 - 29 May - Josh - [Unix system and security basics](unix_basics/README.md)
 - 05 June - Josh, Peter, and Cassy - machine learning and planning
-- 12 June - Chenni - password cracking
+- 12 June - Chenni - [password cracking](cracking/README.md)
 - 19 June - Ben - [intepretation and code art](https://cs.anu.edu.au/hub/workshops/interpretation-and-code-art/)
 
 
