@@ -1,16 +1,26 @@
 # Canberra Computer Science Enrichment Calendar
 
-## Term 2 2020
+## Term 3 2020
+
+- 31 July - Paul - [embedded systems](single_board_computer/README.md)
+- 7 August -  
+- 14 August - 
+- 21 August - 
+- 28 August -
+- 4 September - Artem - network attacks
+- 11 September - Artem - network attacks
+
+## Previous Terms
+
+### Term 2 2020
 
 - 15 May - Ralph - used the [online calculator](http://magma.maths.usyd.edu.au/calc/) to give a tutorial of Magma
 - 22 May - Josh - [Unix system and security basics](unix_basics/README.md)
-- 29 May - Paul - embedded systems
-- 05 June - Chenni - password cracking
-- 12 June - Artem - computer network attacks
-- 19 June - Ben - computer music
+- 29 May - Josh - [Unix system and security basics](unix_basics/README.md)
+- 05 June - Josh, Peter, and Cassy - machine learning and planning
+- 12 June - Chenni - password cracking
+- 19 June - Ben - [intepretation and code art](https://cs.anu.edu.au/hub/workshops/interpretation-and-code-art/)
 
-
-## Previous Terms
 
 ### Term 1 2020
 
