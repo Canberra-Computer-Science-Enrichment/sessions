@@ -3,8 +3,8 @@
 ## Term 3 2020
 
 - 31 July - Paul - [embedded systems](single_board_computer/README.md)
-- 7 August -  
-- 14 August - 
+- 7 August - Josh / Paul
+- 14 August - Josh - [game AI](game_ai/halite.iypnb)
 - 21 August - 
 - 28 August -
 - 4 September - Artem - network attacks
