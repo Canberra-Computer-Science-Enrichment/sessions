@@ -45,7 +45,7 @@ traceroute -I anu.edu.au
 ````
 and
 ````
-sudo -T traceroute -T anu.edu.au
+traceroute -T anu.edu.au
 ````
 The former command relays on ICMP packets and the latter one uses Transport layer (SYN packets) to trace the route.
 4. A visual analog of traceroute is https://www.pingplotter.com/download/ Try it as a homework exercise.
