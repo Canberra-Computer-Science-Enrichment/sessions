@@ -7,7 +7,7 @@
 - 14 August - Josh - [game AI](game_ai/halite.ipynb)
 - 21 August - Josh - [game AI](game_ai/halite.ipynb)
 - 28 August - Cassy - functional programming
-- 4 September - Artem - network attacks
+- 4 September - Artem - [network attacks](networking)
 - 11 September - Artem - network attacks
 
 ## Previous Terms
