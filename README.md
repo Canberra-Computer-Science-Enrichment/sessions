@@ -5,8 +5,8 @@
 - 31 July - Paul - [embedded systems](single_board_computer/README.md)
 - 7 August - Josh / Paul
 - 14 August - Josh - [game AI](game_ai/halite.ipynb)
-- 21 August - 
-- 28 August -
+- 21 August - Josh - [game AI](game_ai/halite.ipynb)
+- 28 August - Cassy - functional programming
 - 4 September - Artem - network attacks
 - 11 September - Artem - network attacks
 
