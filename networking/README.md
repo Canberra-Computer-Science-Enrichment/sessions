@@ -15,6 +15,8 @@ Some of these tools are preinstalled on many Linux systems. In case one of the t
 sudo apt install lynx
 ````
 
+# Part 1
+
 ## Exercise 1
 
 1.	Run the command-line command: `ifconfig`
@@ -84,3 +86,73 @@ nmap -v -A scanme.nmap.org
 2. Run: `nmap -v -A scanme.nmap.org`
 3. Study the output of the command above. What is the IP address of the destination host? What ports are opened at the destination host?
 4. Does it run a webserver and if does what is its version?
+
+
+# Part 2
+
+# Exercise 1
+
+The goal of this exercise is to get familiar with command-line tools for programming and building applications written in the C language.
+
+1.	In order to login to Amazon EC2, open a terminal and use a command similar to 
+````
+ssh artem@ec2-52-64-53-141.ap-southeast-2.compute.amazonaws.com
+````
+2.	Open a text editor by typing in command line: 
+````
+nano calculator.c 
+````
+3.	Copy the calculator source code from the slides (see comments section) and press `<Ctrl> + <x>` to quit the program.
+4.	Build the executable: 
+````
+gcc calc.c -o calc
+````
+5.	Run and test the calculator program by typing in the terminal:
+````
+./calc
+````
+6.	Extend the calculator program to the multiplication and division operations by modifying the function `float calculator (char op, float a, float b)`.
+7.	Build and test the modified program.
+
+# Exercise 2
+
+The goal of this exercise is to build and test a simple client and a server that communicates over TCP. 
+
+1.	Open a text editor by typing in command line: 
+````
+nano server.c 
+````
+2.	Copy the server source code from the slides (see comments section)
+3.	Build the executable: 
+````
+gcc server.c -o server
+````
+4.	Open a text editor by typing in command line: 
+````
+nano client.c 
+````
+5.	Copy the client source code from the slides (see comments section)
+6.	Build the executable:
+````
+gcc client.c -o client
+````
+7.	Run the server built in step 4 by typing in the terminal:
+````
+./server
+````
+8.	Similarly, to step 1, open another terminal window and login to Amazon EC2.
+9.	In the terminal, run the client built in step 5 by typing in the terminal:
+````
+./client
+````
+10.	Open `server.c` and add the following line of code after the connection has been accepted by the server, then recompile and test the server.
+````
+printf("IP address: %s\n", inet_ntoa(address.sin_addr));
+````
+11.	Open `client.c` and change the server’s IP address from 127.0.0.1 to 3.21.167.186. Change the message to be sent from "Hello from client" to "Hello from <your name>".
+12.	Build and run the program.
+
+## Exercise 3
+
+The goal of this exercise is to create a client that fakes it source IP address. 
+
