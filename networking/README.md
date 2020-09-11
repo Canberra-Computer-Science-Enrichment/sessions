@@ -100,7 +100,7 @@ ssh artem@ec2-52-64-53-141.ap-southeast-2.compute.amazonaws.com
 ````
 2.	Download the source file calc.c from GitHub by running the following command:
 ````
-wget https://github.com/Canberra-Computer-Science-Enrichment/sessions/blob/master/networking/calc.c
+wget https://raw.githubusercontent.com/Canberra-Computer-Science-Enrichment/sessions/master/networking/calc.c
 ````
 3.	Browse the source code in the [*nano* text editor](https://www.nano-editor.org/dist/latest/nano.html); you can press `<Ctrl> + <x>` to quit the program.
 4.	Build the executable: 
@@ -120,7 +120,7 @@ The goal of this exercise is to build and test a simple client and a server that
 
 1.	Download the server code from GitHub:
 ````
-wget https://github.com/Canberra-Computer-Science-Enrichment/sessions/blob/master/networking/server.c
+wget https://raw.githubusercontent.com/Canberra-Computer-Science-Enrichment/sessions/master/networking/server.c
 ````
 2.	Build the executable: 
 ````
@@ -128,7 +128,7 @@ gcc server.c -o server
 ````
 3.	Download the client code from GitHub:
 ````
-wget https://github.com/Canberra-Computer-Science-Enrichment/sessions/blob/master/networking/client.c
+wget https://raw.githubusercontent.com/Canberra-Computer-Science-Enrichment/sessions/master/networking/client.c
 ````
 4.	Copy the client source code from the slides (see comments section)
 5.	Build the executable:
