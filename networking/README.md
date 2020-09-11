@@ -98,11 +98,11 @@ The goal of this exercise is to get familiar with command-line tools for program
 ````
 ssh artem@ec2-52-64-53-141.ap-southeast-2.compute.amazonaws.com
 ````
-2.	Open a text editor by typing in command line: 
+2.	Download the source file calc.c from GitHub by running the following command:
 ````
-nano calculator.c 
+wget https://github.com/Canberra-Computer-Science-Enrichment/sessions/blob/master/networking/calc.c
 ````
-3.	Copy the calculator source code from the slides (see comments section) and press `<Ctrl> + <x>` to quit the program.
+3.	Browse the source code in the [*nano* text editor](https://www.nano-editor.org/dist/latest/nano.html); you can press `<Ctrl> + <x>` to quit the program.
 4.	Build the executable: 
 ````
 gcc calc.c -o calc
@@ -118,37 +118,37 @@ gcc calc.c -o calc
 
 The goal of this exercise is to build and test a simple client and a server that communicates over TCP. 
 
-1.	Open a text editor by typing in command line: 
+1.	Download the server code from GitHub:
 ````
-nano server.c 
+wget https://github.com/Canberra-Computer-Science-Enrichment/sessions/blob/master/networking/server.c
 ````
-2.	Copy the server source code from the slides (see comments section)
-3.	Build the executable: 
+2.	Build the executable: 
 ````
 gcc server.c -o server
 ````
-4.	Open a text editor by typing in command line: 
+3.	Download the client code from GitHub:
 ````
-nano client.c 
+wget https://github.com/Canberra-Computer-Science-Enrichment/sessions/blob/master/networking/client.c
 ````
-5.	Copy the client source code from the slides (see comments section)
-6.	Build the executable:
+4.	Copy the client source code from the slides (see comments section)
+5.	Build the executable:
 ````
 gcc client.c -o client
 ````
-7.	Run the server built in step 4 by typing in the terminal:
+6.	Run the server built in step 2 by typing in the terminal:
 ````
 ./server
 ````
-8.	Similarly, to step 1, open another terminal window and login to Amazon EC2.
-9.	In the terminal, run the client built in step 5 by typing in the terminal:
+7.	As per Exercise 1 Step 1, open another terminal window and login to Amazon EC2.
+8.	In the terminal, run the client built in step 4 by typing in the terminal:
 ````
 ./client
 ````
-10.	Open `server.c` and add the following line of code after the connection has been accepted by the server, then recompile and test the server.
+9.	Open `server.c` using the nano editor and add the following line of code after the connection has been accepted by the server.
 ````
 printf("IP address: %s\n", inet_ntoa(address.sin_addr));
 ````
+Recompile and test the server.
 11.	Open `client.c` and change the server’s IP address from 127.0.0.1 to 3.21.167.186. Change the message to be sent from "Hello from client" to "Hello from <your name>".
 12.	Build and run the program.
 
