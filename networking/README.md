@@ -145,7 +145,7 @@ gcc client.c -o client
 ````
 ./client
 ````
-10.	Open `server.c` and add the following line of code after the connection has been accepted by the server, then recompile and test the server.
+10.	Open `server.c` and add the following line of code after the connection has been accepted by the server. You will also have to add `#include <arpa/inet.h>` the header file that defines function `inet_ntoa`, and then recompile and test the server.
 ````
 printf("IP address: %s\n", inet_ntoa(address.sin_addr));
 ````
