@@ -1,5 +1,17 @@
 # Canberra Computer Science Enrichment Calendar
 
+## Term 4 2020
+
+- 16 October - Josh - logic and automated reasoning (partly following John Slaney's [Logic 4 Fun](https://l4f.cecs.anu.edu.au/))
+- 23 October - Josh - logic and automated reasoning
+- 30 October
+- 6 November
+- 13 November - Eleni - machine learning
+- 20 November - Pascal - planning
+
+
+## Previous Terms
+
 ## Term 3 2020
 
 - 31 July - Paul - [embedded systems](single_board_computer/README.md)
@@ -9,8 +21,6 @@
 - 28 August - Cassy - functional programming
 - 4 September - Artem - [network attacks](networking)
 - 11 September - Artem - network attacks
-
-## Previous Terms
 
 ### Term 2 2020
 
