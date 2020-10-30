@@ -2,9 +2,9 @@
 
 ## Term 4 2020
 
-- 16 October - Josh - logic and automated reasoning (partly following John Slaney's [Logic 4 Fun](https://l4f.cecs.anu.edu.au/))
+- 16 October - Josh - [logic and automated reasoning](automated_reasoning/README.md) (partly following John Slaney's [Logic 4 Fun](https://l4f.cecs.anu.edu.au/))
 - 23 October - Josh - logic and automated reasoning
-- 30 October
+- 30 October - Josh - logic and automated reasoning
 - 6 November
 - 13 November - Eleni - machine learning
 - 20 November - Pascal - planning
