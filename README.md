@@ -2,12 +2,12 @@
 
 ## Term 4 2020
 
-- 16 October - Josh - [logic and automated reasoning](automated_reasoning/README.md) (partly following John Slaney's [Logic 4 Fun](https://l4f.cecs.anu.edu.au/))
+- 16 October - [Josh](http://www.milthorpe.org/) - [logic and automated reasoning](automated_reasoning/README.md) (partly following John Slaney's [Logic 4 Fun](https://l4f.cecs.anu.edu.au/))
 - 23 October - Josh - logic and automated reasoning
 - 30 October - Josh - logic and automated reasoning
 - 6 November - Josh - computational and algorithmic problem solving (featuring problems from the [Australian Mathematics Trust Computational & Algorithmic Thinking Competition](https://www.amt.edu.au/cat-competition)
-- 13 November - Eleni - machine learning
-- 20 November - Pascal - planning
+- 13 November - [Eleni](https://researchers.anu.edu.au/researchers/daskalaki-e) - machine learning
+- 20 November - [Pascal](https://cecs.anu.edu.au/people/pascal-bercher) - planning
 
 
 ## Previous Terms
@@ -19,7 +19,7 @@
 - 14 August - Josh - [game AI](game_ai/halite.ipynb)
 - 21 August - Josh - [game AI](game_ai/halite.ipynb)
 - 28 August - Cassy - functional programming
-- 4 September - Artem - [network attacks](networking)
+- 4 September - [Artem](https://cecs.anu.edu.au/people/artem-lenskiy) - [network attacks](networking)
 - 11 September - Artem - network attacks
 
 ### Term 2 2020
@@ -29,7 +29,7 @@
 - 29 May - Josh - [Unix system and security basics](unix_basics/README.md)
 - 05 June - Josh, Peter, and Cassy - machine learning and planning
 - 12 June - Chenni - [password cracking](cracking/README.md)
-- 19 June - Ben - [intepretation and code art](https://cs.anu.edu.au/hub/workshops/interpretation-and-code-art/)
+- 19 June - [Ben](https://benswift.me/) - [intepretation and code art](https://cs.anu.edu.au/hub/workshops/interpretation-and-code-art/)
 
 
 ### Term 1 2020
