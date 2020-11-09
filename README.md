@@ -5,7 +5,7 @@
 - 16 October - Josh - [logic and automated reasoning](automated_reasoning/README.md) (partly following John Slaney's [Logic 4 Fun](https://l4f.cecs.anu.edu.au/))
 - 23 October - Josh - logic and automated reasoning
 - 30 October - Josh - logic and automated reasoning
-- 6 November
+- 6 November - Josh - computational and algorithmic problem solving (featuring problems from the [Australian Mathematics Trust Computational & Algorithmic Thinking Competition](https://www.amt.edu.au/cat-competition)
 - 13 November - Eleni - machine learning
 - 20 November - Pascal - planning
 
