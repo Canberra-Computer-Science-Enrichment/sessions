@@ -7,7 +7,7 @@
 - 30 October - Josh - logic and automated reasoning
 - 6 November - Josh - computational and algorithmic problem solving (featuring problems from the [Australian Mathematics Trust Computational & Algorithmic Thinking Competition](https://www.amt.edu.au/cat-competition)
 - 13 November - [Eleni](https://researchers.anu.edu.au/researchers/daskalaki-e) - [machine learning](intro_ml/MNIST_school.ipynb)
-- 20 November - [Pascal](https://cecs.anu.edu.au/people/pascal-bercher) - planning
+- 20 November - [Pascal](https://cecs.anu.edu.au/people/pascal-bercher) - [planning](planning)
 
 
 ## Previous Terms
