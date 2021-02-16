@@ -1,5 +1,16 @@
 # Canberra Computer Science Enrichment Calendar
 
+## Term 1 2021
+
+- 19 February - [Josh](http://www.milthorpe.org/) - introduction: symbolic systems
+- 26 February
+- 5 March
+- 12 March
+- 19 March - Robin - artificial intelligence and consciousness
+- 26 March
+
+## Previous Terms
+
 ## Term 4 2020
 
 - 16 October - [Josh](http://www.milthorpe.org/) - [logic and automated reasoning](automated_reasoning/README.md) (partly following John Slaney's [Logic 4 Fun](https://l4f.cecs.anu.edu.au/))
@@ -9,8 +20,6 @@
 - 13 November - [Eleni](https://researchers.anu.edu.au/researchers/daskalaki-e) - [machine learning](intro_ml/MNIST_school.ipynb)
 - 20 November - [Pascal](https://cecs.anu.edu.au/people/pascal-bercher) - [planning](http://hierarchical-task.net/pb/teaching/2020-S2--CCSE--PlanningIntro.pdf) (PDDL files for hands-on BlocksWorld exercises)[http://hierarchical-task.net/pb/teaching/2020-S2--CCSE--PlanningIntroHandsOn.zip]
 
-
-## Previous Terms
 
 ## Term 3 2020
 
