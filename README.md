@@ -5,7 +5,7 @@
 - 19 February - [Josh](http://www.milthorpe.org/) - introduction: symbolic systems
 - 26 February
 - 5 March
-- 12 March
+- 12 March - [Jennyfer](https://cecs.anu.edu.au/people/jennyfer-lawrence-taylor) - human-computer interaction and design
 - 19 March - Robin - artificial intelligence and consciousness
 - 26 March
 
