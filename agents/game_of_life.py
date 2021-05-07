@@ -33,7 +33,7 @@ def update(before):
     after = np.copy(before)
 
     for row, col in np.ndindex(before.shape):
-        cs = count_surrounding(row, col)
+        cs = count_neighbours(row, col)
         if before[row][col] == True and cs < 2:
             after[row][col] = False
         elif before[row][col] == True and cs > 3:
@@ -46,7 +46,7 @@ def update(before):
 
 # For the given cell at (row,col), count the number of neighbouring
 # cells that are live. Use periodic boundary conditions.
-def count_surrounding(row, col):
+def count_neighbours(row, col):
     count = 0
     rows = world.shape[0]
     cols = world.shape[1]
