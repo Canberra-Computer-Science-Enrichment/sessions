@@ -106,25 +106,9 @@ def get_empty_neighbours(row, col):
     return a list of all neighbouring locations that are currently empty
     """
     empty_neighbours = []
-    rows = animals.shape[0]
-    cols = animals.shape[1]
-    for rr in [row-1,row,row+1]:
-        if rr < 0:
-            r = rows-1
-        elif rr > rows-1:
-            r = 0
-        else:
-            r = rr
-        for cc in [col-1,col,col+1]:
-            if cc < 0:
-                c = cols-1
-            elif cc > cols-1:
-                c = 0
-            else:
-                c = cc
-            if not (r == row and c == col):
-                if not animals[r][c] or (rr == r and cc == c):
-                    empty_neighbours.append((r,c))
+    for r,c in get_neighbourhood(row, col):
+        if not animals[r][c] or r == row and c == col:
+            empty_neighbours.append((r,c))
     return empty_neighbours
 
 def count_neighbours(row, col, type):
