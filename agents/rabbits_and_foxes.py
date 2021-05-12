@@ -3,7 +3,7 @@
 import tkinter as tk
 import random
 import numpy as np
-import copy
+import itertools
 
 WORLD_SIZE = 60
 CELL_DIM = 15
@@ -131,30 +131,24 @@ def count_neighbours(row, col, type):
     """
     For the given location at (row,col), count the number of neighbouring
     location that contain an animal of type "type". 
-    Use periodic boundary conditions.
     """
     count = 0
-    rows = world.shape[0]
-    cols = world.shape[1]
-    for rr in [row-1,row,row+1]:
-        if rr < 0:
-            r = rows-1
-        elif rr > rows-1:
-            r = 0
-        else:
-            r = rr
-        for cc in [col-1,col,col+1]:
-            if cc < 0:
-                c = cols-1
-            elif cc > cols-1:
-                c = 0
-            else:
-                c = cc
-            if not (r == row and c == col):
-                if isInstance(animals[r][c], type):
-                    if not ((rr != r or cc != c)):
-                        count += 1
+    for r,c in get_neighbourhood(row, col):
+        if not (r == row and c == col):
+            if isinstance(animals[r][c], type):
+                count += 1
     return count
+
+def get_neighbourhood(row, col):
+    """
+    For a given row and column, get the indexes of neighbouring cells.
+    Use periodic boundary conditions.
+    """
+    rows = animals.shape[0]
+    cols = animals.shape[1]
+    x_values = [rows-1 if row == 0 else row-1, row, 0 if row == rows-1 else row-1]
+    y_values = [cols-1 if col == 0 else col-1, col, 0 if col == cols-1 else col-1]
+    return itertools.product(x_values, y_values)
 
 def animation():
     """
@@ -197,7 +191,7 @@ animals, grass = init_world()
 
 # Set up visualization window
 root = tk.Tk()
-root.title("Conway's Game of Life")
+root.title("Rabbits and Foxes")
 canvas = tk.Canvas(root, width=WORLD_SIZE*CELL_DIM + 1, height=WORLD_SIZE*CELL_DIM+1, bg='darkblue')
 canvas.pack(side=tk.TOP, expand=tk.YES, fill=tk.BOTH)
 
