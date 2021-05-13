@@ -8,8 +8,8 @@ import itertools
 WORLD_SIZE = 60
 CELL_DIM = 15
 REFRESH_TIME = 100
-INITIAL_DENSITY_RABBITS = 0.5
-INITIAL_DENSITY_FOXES = 0.03
+INITIAL_DENSITY_RABBITS = 0.2
+INITIAL_DENSITY_FOXES = 0.01
 MAX_GRASS = 5
 MAX_HUNGER = 10
 
@@ -39,9 +39,8 @@ class Rabbit(Animal):
         new_location = random.choice(empty_neighbours)
         animals[self.x,self.y] = None
         animals[new_location] = self
-        self.x = new_location[0]
-        self.y = new_location[1]
-        # FIXME eat, reproduce
+        self.x, self.y = new_location
+        # TODO eat, reproduce
 
 class Fox(Animal):
     def __init__(self, x, y):
@@ -62,9 +61,8 @@ class Fox(Animal):
         new_location = random.choice(empty_neighbours)
         animals[self.x,self.y] = None
         animals[new_location] = self
-        self.x = new_location[0]
-        self.y = new_location[1]
-        # FIXME eat, reproduce
+        self.x, self.y = new_location
+        # TODO eat, reproduce
 
 def init_world():
     """
@@ -72,21 +70,22 @@ def init_world():
     each location has a likelihood INITIAL_DENSITY_RABBITS of containing a 
     rabbit,  or INITIAL_DENSITY_FOXES of containing a fox
     """
-    animals=np.empty((WORLD_SIZE, WORLD_SIZE), dtype=Animal)
     grass=np.empty((WORLD_SIZE, WORLD_SIZE), dtype=int)
-    for i in range(WORLD_SIZE):
-        for j in range(WORLD_SIZE):
-            r = random.random()
-            if r < INITIAL_DENSITY_FOXES:
-                animals[i,j] = Fox(i,j)
-                survivors.append(animals[i,j])
-            elif r < INITIAL_DENSITY_RABBITS:
-                animals[i,j] = Rabbit(i,j)
-                survivors.append(animals[i,j])
-            grass[i,j] = random.randint(0,MAX_GRASS)
-    return animals, grass
+    animals=np.empty((WORLD_SIZE, WORLD_SIZE), dtype=Animal)
+    survivors=[]
+    for i,j in np.ndindex(grass.shape):
+        r = random.random()
+        if r < INITIAL_DENSITY_FOXES:
+            animals[i,j] = Fox(i,j)
+            survivors.append(animals[i,j])
+        elif r < INITIAL_DENSITY_RABBITS:
+            animals[i,j] = Rabbit(i,j)
+            survivors.append(animals[i,j])
+        grass[i,j] = random.randint(0,MAX_GRASS)
+    random.shuffle(survivors)
+    return grass, animals, survivors
 
-def update(animals, grass):
+def update(grass, animals, survivors):
     """
     Update the world by making each animal move, eat, reproduce, and/or die
     First, each animal moves, eats, and reproduces (if possible) in order
@@ -98,8 +97,13 @@ def update(animals, grass):
     """
     for animal in survivors:
         animal.move_and_eat()
-        # FIXME animals that have starved should die
-    return animals, grass
+    for i,j in np.ndindex(grass.shape):
+        if animals[i,j] == None:
+            grass[i,j] = min(MAX_GRASS, grass[i,j]+2)
+        elif animals[i,j].hunger == MAX_HUNGER:
+            survivors.remove(animals[i,j])
+            animals[i,j] = None
+    return grass, animals, survivors
 
 def get_empty_neighbours(row, col):
     """
@@ -128,20 +132,18 @@ def get_neighbourhood(row, col):
     For a given row and column, get the indexes of neighbouring cells.
     Use periodic boundary conditions.
     """
-    rows = animals.shape[0]
-    cols = animals.shape[1]
-    x_values = [rows-1 if row == 0 else row-1, row, 0 if row == rows-1 else row-1]
-    y_values = [cols-1 if col == 0 else col-1, col, 0 if col == cols-1 else col-1]
-    return itertools.product(x_values, y_values)
+    row_values = [WORLD_SIZE-1 if row == 0 else row-1, row, 0 if row == WORLD_SIZE-1 else row+1]
+    col_values = [WORLD_SIZE-1 if col == 0 else col-1, col, 0 if col == WORLD_SIZE-1 else col+1]
+    return itertools.product(row_values, col_values)
 
 def animation():
     """
     Animate one timestep of the simulation, and start another animation to
     occur after REFRESH_TIME ms
     """
-    global step, animals, grass
+    global step, grass, animals, survivors
     step += 1
-    animals, grass = update(animals, grass)
+    grass, animals, survivors = update(grass, animals, survivors)
     display_world()
     root.after(REFRESH_TIME, animation)
 
@@ -169,9 +171,7 @@ def from_rgb(r,g,b):
     return "#%02x%02x%02x" % (r,g,b) 
 
 
-survivors = []
-animals, grass = init_world()
-
+grass, animals, survivors = init_world()
 
 # Set up visualization window
 root = tk.Tk()
