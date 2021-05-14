@@ -21,6 +21,17 @@ class Animal:
         self.y = y
         self.hunger = MAX_HUNGER / 2
 
+    def reproduce(self):
+        """
+        If this animal's hunger level is zero, set this animal's hunger level
+        to MAX_HUNGER / 2 and then reproduce by creating a clone of this
+        animal and moving it to a random neighbouring empty location.
+        If there are no neighbouring empty locations, the child dies (i.e.
+        reproduction is unsuccessful).
+        """
+        # TODO complete this function
+        return None
+
 class Rabbit(Animal):
     def __init__(self, x, y):
         super().__init__(x, y)
@@ -35,12 +46,16 @@ class Rabbit(Animal):
         locations), and increase this rabbit's hunger level by 1 (to a
         maximum hunger level of MAX_HUNGER).
         """
-        empty_neighbours = get_empty_neighbours(self.x,self.y)
-        new_location = random.choice(empty_neighbours)
-        animals[self.x,self.y] = None
-        animals[new_location] = self
-        self.x, self.y = new_location
-        # TODO eat, reproduce
+        if grass[self.x,self.y] > 0:
+            grass[self.x,self.y] -= 1
+            self.hunger = max(0, self.hunger - 1)
+        else:
+            empty_neighbours = get_empty_neighbours(self.x,self.y)
+            new_location = random.choice(empty_neighbours)
+            animals[self.x,self.y] = None
+            animals[new_location] = self
+            self.x, self.y = new_location
+            self.hunger = min(MAX_HUNGER, self.hunger + 1)
 
 class Fox(Animal):
     def __init__(self, x, y):
@@ -62,7 +77,7 @@ class Fox(Animal):
         animals[self.x,self.y] = None
         animals[new_location] = self
         self.x, self.y = new_location
-        # TODO eat, reproduce
+        # TODO eat or increase hunger
 
 def init_world():
     """
@@ -97,9 +112,13 @@ def update(grass, animals, survivors):
     """
     for animal in survivors:
         animal.move_and_eat()
+        child = animal.reproduce()
+        if child:
+            survivors.append(child)
+
     for i,j in np.ndindex(grass.shape):
         if animals[i,j] == None:
-            grass[i,j] = min(MAX_GRASS, grass[i,j]+2)
+            grass[i,j] = min(MAX_GRASS, grass[i,j]+1)
         elif animals[i,j].hunger == MAX_HUNGER:
             survivors.remove(animals[i,j])
             animals[i,j] = None
