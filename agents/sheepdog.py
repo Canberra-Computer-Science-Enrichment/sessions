@@ -66,6 +66,9 @@ class Animal:
         elif self.y > WORLD_SIZE:
             self.y = WORLD_SIZE
             self.direction -= pi
+        
+    def passed_gate(self):
+        return self.y <= 0 and (self.x > WORLD_SIZE/2-50) and self.x < (WORLD_SIZE/2+50)
 
 class Sheep(Animal):
     def __init__(self, x, y):
@@ -142,6 +145,12 @@ def update():
     cookie.move()
     for s in sheep:
         s.move()
+        if s.passed_gate():
+            sheep.remove(s)
+
+def draw_gate():
+    canvas.create_line(0,3, WORLD_SIZE/2-50,3, width=3, fill='black')
+    canvas.create_line(WORLD_SIZE/2+50,3, WORLD_SIZE,3, width=5, fill='black')
 
 def display_world():
     """display the current state of the world"""
@@ -149,6 +158,7 @@ def display_world():
     cookie.display(canvas)
     for s in sheep:
         s.display(canvas)
+    draw_gate()
 
 def animation():
     """Animate one timestep of the simulation.
